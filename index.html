@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.353">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prueba</title>
+<title>Datos territoriales de pobreza en la Comunidad Valenciana</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,11 +33,13 @@ ul.task-list li input[type="checkbox"] {
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link rel="preconnect" href="https://rsms.me/"> </head><body class="fullcontent">|
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
 
-</head>
 
-<body class="fullcontent">
+
+
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
@@ -45,13 +47,19 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prueba</h1>
+<h1 class="title">Datos territoriales de pobreza en la Comunidad Valenciana</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kiko Llaneras y Borja Andrino </p>
+          </div>
+  </div>
     
   
     
@@ -60,24 +68,187 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-</section>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<iframe src="https://datawrapper.dwcdn.net/R4c2j/5/" width="672" height="400px" data-external="1">
+<p><strong>Resumen.</strong> Hemos preparado un conjunto de datos que reúne una docena de indicadores territoriales sobre pobreza en la Comunidad Valenciana. Todos los datos se han obtenido de diferentes fuentes oficiales y en especial de Instituto Nacional de Estadística (INE). Se incluye la información para tres niveles geográficos: municipios, distritos y secciones censales.</p>
+<p>Este documento de presentación se divide en dos partes:</p>
+<ol type="1">
+<li><p><strong>Exploración básica.</strong> Donde se muestran algunos resultados a partir de los datos. Un buscador permite consultar la renta y la pobreza por municipio. Dos mapas permiten explorar sección a sección. Además, se cruzan varias variables de interés.</p></li>
+<li><p><strong>Anexo: fuentes y codificación.</strong> Donde se describe cada variable del conjunto de datos y se detallan sus fuentes.</p></li>
+</ol>
+<section id="exploración" class="level2">
+<h2 class="anchored" data-anchor-id="exploración">1. Exploración</h2>
+<section id="renta-y-pobreza-por-municipio" class="level3">
+<h3 class="anchored" data-anchor-id="renta-y-pobreza-por-municipio">1.1 Renta y pobreza por municipio</h3>
+<p>La base de datos incluye la información del INE con la renta mediana y la tasa de pobreza para cada localidad. Por ejemplo, entre los municipios con mayor renta están Godella, Rocafort y San Antonio de Benagéber —con una renta mediana por unidad de consumo de 23.450 euros, y apenas un 10% de personas en riesgo de pobreza (con una renta equivalente por persona inferior al 60% de la mediana nacional)—. En el extremo opuesto aparecen municipios como Torrevieja y Almoradí, donde la renta no pasa de 11.500 euros y la pobreza se eleva al 40%.</p>
+<p>El buscador a continuación permite consultar todos los municipios con información del INE, incluyendo datos de renta y pobreza:</p>
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/JK1ZP/36/" width="100%" height="617px" data-external="1">
 </iframe>
 </div>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<p>La relación entre renta y pobreza es muy fuerte, como cabría esperar. Pero llama la atención la diferencias entre municipios pequeños y grandes: en las capitales hay más pobreza para la misma renta mediana, quizá porque acogen más desigualdad. Por ejemplo, Alicante tiene la misma renta mediana que Ontinyent, pero 8 puntos más de pobreza; Valencia capital tienen la misma renta que Almàssera, pero 5 puntos más de pobreza.</p>
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/YgHLE/28/" width="100%" height="617px" data-external="1">
+</iframe>
+</div>
+</section>
+<section id="mapas-de-renta-y-pobreza-por-sección-censal" class="level3">
+<h3 class="anchored" data-anchor-id="mapas-de-renta-y-pobreza-por-sección-censal">1.2 Mapas de renta y pobreza por sección censal</h3>
+<p>La base de datos incluye datos por distrito y sección censal para muchas variables. Eso permite explorar el interior de los municipios más grandes. A continuación se muestran los mapas de renta y pobreza nivel sección censal.</p>
+<p><strong>Mapa de pobreza por sección censal (%)</strong></p>
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/U74ES/51/" width="100%" height="741px" data-external="1">
+</iframe>
+</div>
+<p><strong>Mapa de renta mediana por sección censal (euros)</strong></p>
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/U74ES/52/" width="100%" height="741px" data-external="1">
+</iframe>
+</div>
+</section>
+<section id="cruces-con-variables-sociodemográficos" class="level3">
+<h3 class="anchored" data-anchor-id="cruces-con-variables-sociodemográficos">1.3 Cruces con variables sociodemográficos</h3>
+<p>Las bases de datos para municipios, distritos y secciones incluyen variables sociodemográficas, como el precio del alquiler, el porcentaje de jubilados, parados, jóvenes, familias monoparentales o nacidos en el extranjero.</p>
+<p>A modo de ejemplo, los gráficos siguientes muestran la relación de la renta y la pobreza con media docena de estas otras variables.</p>
+<p><strong>Renta y pobreza vs.&nbsp;parados</strong></p>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/nqVQe/27/" width="100%" height="400px" data-external="1">
+</iframe>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/VgzgR/28/" width="100%" height="400px" data-external="1">
+</iframe>
 </div>
 </div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+</div>
+<p><strong>Renta y pobreza vs.&nbsp;alquiler</strong></p>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/Ag5pD/29/" width="100%" height="400px" data-external="1">
+</iframe>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/h508P/28/" width="100%" height="400px" data-external="1">
+</iframe>
+</div>
+</div>
+</div>
+<p><strong>Renta y pobreza vs.&nbsp;monoparentales</strong></p>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/3Mzk7/27/" width="100%" height="400px" data-external="1">
+</iframe>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/jz18I/27/" width="100%" height="400px" data-external="1">
+</iframe>
+</div>
+</div>
+</div>
+<p><strong>Renta y pobreza vs.&nbsp;jubilados</strong></p>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/C0nWI/25/" width="100%" height="400px" data-external="1">
+</iframe>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:47.5%;">
+<div class="cell" data-layout-align="center">
+<iframe src="https://datawrapper.dwcdn.net/4PWDN/26/" width="100%" height="400px" data-external="1">
+</iframe>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="anexo.-fuentes-y-codificación" class="level2">
+<h2 class="anchored" data-anchor-id="anexo.-fuentes-y-codificación">2. Anexo. Fuentes <strong>y codificación</strong></h2>
+<p>El conjunto de datos reúne una docena de indicadores territoriales sobre pobreza en la Comunidad Valenciana, obtenidos de diferentes fuentes oficiales. Se incluye la información para tres niveles geográficos, en tres formatos diferentes:</p>
+<ul>
+<li>Datos por municipio: <code>pobreza_mun</code> ( <code>.csv</code> , <code>.xls</code> y <code>.sav</code>)</li>
+<li>Datos por distrito: <code>pobreza_dist</code> ( <code>.csv</code> , <code>.xls</code> y <code>.sav</code>)</li>
+<li>Datos por sección censal: <code>pobreza_secc</code> ( <code>.csv</code> , <code>.xls</code> y <code>.sav</code>)</li>
+</ul>
+<p>A continuación se describe cada variable y sus fuentes. Para más detalles de la metodología particular de cada indicador, consultar la fuente primaria.</p>
+<section id="variables-de-renta-y-pobreza" class="level3">
+<h3 class="anchored" data-anchor-id="variables-de-renta-y-pobreza">Variables de renta y pobreza</h3>
+<p><strong>Renta (<code>renta_med</code>)</strong></p>
+<ul>
+<li><p>Mediana de la renta por unidad de consumo (en euros; 2020). La metodología detalla se puede consultar en el INE.</p></li>
+<li><p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177088&amp;menu=ultiDatos&amp;idp=1254735976608">Atlas de distribución de rentas de los hogares</a> (INE)</p></li>
+</ul>
+<p>Pobreza (<code>pobreza_pc</code>)</p>
+<ul>
+<li><p>Población en riesgo de pobreza: con una renta por unidad de consumo por debajo del 60% de la renta mediana (%; 2020).</p></li>
+<li><p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177088&amp;menu=ultiDatos&amp;idp=1254735976608">Atlas de distribución de rentas de los hogares</a> (INE)</p></li>
+</ul>
+<p>Pobreza de menores (<code>pobreza_menores_pc</code>)</p>
+<ul>
+<li><p>Población de menos de 18 años en riesgo de pobreza (%; 2020).</p></li>
+<li><p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177088&amp;menu=ultiDatos&amp;idp=1254735976608">Atlas de distribución de rentas de los hogares</a> (INE)</p></li>
+</ul>
+<p>Pobreza de mayores (<code>pobreza_mayores_pc</code>)</p>
+<ul>
+<li><p>Población de 65 años y más en riesgo de pobreza (%; 2020).</p></li>
+<li><p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177088&amp;menu=ultiDatos&amp;idp=1254735976608">Atlas de distribución de rentas de los hogares</a> (INE)</p></li>
+</ul>
+</section>
+<section id="variables-sociodemográficas" class="level3">
+<h3 class="anchored" data-anchor-id="variables-sociodemográficas">Variables sociodemográficas</h3>
+<p><strong>Alquiler (<code>precio_alquiler</code>)</strong></p>
+<p>Mediana del alquiler mensual en viviendas colectivas (en euros por m2; 2021).</p>
+<p>Fuente: <a href="https://www.mitma.gob.es/vivienda/alquiler/indice-alquiler">Índice alquiler de vivienda</a> (Ministerio de Transportes, Movilidad y Agenda Urbana)</p>
+<p><strong>Jubilados (<code>jubilados_pc</code>)</strong></p>
+<p>Porcentaje de población pensionista por jubilación sobre población de 16 y más años (%; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+<p><strong>Parados (<code>parados_pc</code>)</strong></p>
+<p>Porcentaje de población parada, sobre población activa (%; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+<p><strong>Familias monoparentales (<code>monoparental_pc</code>)</strong></p>
+<p>Porcentaje de hogares con un solo progenitor que convive con al menos un hijo menor de 25 años, sobre el total de hogares (%; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+<p><strong>Nacidos en extranjero (<code>extranjeros_pc</code>)</strong></p>
+<p>Porcentaje de personas nacidas en el extranjero sobre el total del censo (%; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+<p><strong>Con estudios superiores (<code>estudios_sup_pc</code>)</strong></p>
+<p>Porcentaje de personas con estudios superiores, sobre el total de población de 16 años y más (%; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+<p><strong>Menores (<code>menores_pc</code>)</strong></p>
+<p>Porcentaje de personas menores de 16 años sobre el total del censo (%; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+<p><strong>Mayores (<code>mayores_pc</code>)</strong></p>
+<p>Porcentaje de personas mayores de 64 años sobre el total del censo (%; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+<p><strong>Población (<code>pob</code>)</strong></p>
+<p>La variable ofrece el dato de población censado para cada municipio, distrito o sección (personas; 2021).</p>
+<p>Fuente: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176992&amp;menu=resultados&amp;idp=1254735572981">Censo de población y viviendas</a> (INE)</p>
+</section>
+<section id="variables-de-geolocalización" class="level3">
+<h3 class="anchored" data-anchor-id="variables-de-geolocalización">Variables de geolocalización</h3>
+<p><strong>Código de sección (<code>codigo_secc</code>)</strong></p>
+<p>Identificador numérico de 10 caracteres de la sección censal (INE).</p>
+<p><strong>Código de distrito (<code>codigo_dist</code>)</strong></p>
+<p>Identificador numérico de 7 caracteres del distrito censal (INE).</p>
+<p><strong>Código del municipio (<code>codigo_mun</code>)</strong></p>
+<p>Identificador numérico de 5 caracteres del municipio (INE).</p>
+<p><strong>Nombre del municipio (<code>mun</code>)</strong></p>
+<p>Nombre del municipio (INE).</p>
+<p><strong>Nombre de la provincia (<code>prov</code>)</strong></p>
+<p>Nombre de la provincia (INE).</p>
+</section>
 </section>
 
 </main>
@@ -136,12 +307,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

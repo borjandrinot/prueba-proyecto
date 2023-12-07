@@ -54,7 +54,6 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
 
-<link rel="stylesheet" href="custom.scss">
 
 
 
@@ -94,7 +93,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
-  <li><a href="#renta-y-pobreza-por-municipio" id="toc-renta-y-pobreza-por-municipio" class="nav-link" data-scroll-target="#renta-y-pobreza-por-municipio">1. Renta y pobreza por municipio</a></li>
+  <li><a href="#renta-y-pobreza-por-municipio" id="toc-renta-y-pobreza-por-municipio" class="nav-link" data-scroll-target="#renta-y-pobreza-por-municipio">1. Renta y pobreza por municipio</a>
+  <ul class="collapse">
+  <li><a href="#buscador-por-municipio" id="toc-buscador-por-municipio" class="nav-link" data-scroll-target="#buscador-por-municipio">Buscador por municipio</a></li>
+  <li><a href="#renta-vs.-pobreza" id="toc-renta-vs.-pobreza" class="nav-link" data-scroll-target="#renta-vs.-pobreza">Renta vs.&nbsp;pobreza</a></li>
+  </ul></li>
   <li><a href="#mapas-por-sección-censal" id="toc-mapas-por-sección-censal" class="nav-link" data-scroll-target="#mapas-por-sección-censal">2. Mapas por sección censal</a>
   <ul class="collapse">
   <li><a href="#mapa-de-pobreza-por-sección-censal" id="toc-mapa-de-pobreza-por-sección-censal" class="nav-link" data-scroll-target="#mapa-de-pobreza-por-sección-censal">Mapa de pobreza por sección censal (%)</a></li>
@@ -176,15 +179,21 @@ Tip
 <h2 class="anchored" data-anchor-id="renta-y-pobreza-por-municipio">1. Renta y pobreza por municipio</h2>
 <p>La base de datos incluye la información del INE con la renta mediana y la tasa de pobreza para cada localidad. Por ejemplo, entre los municipios con mayor renta están Godella, Rocafort y San Antonio de Benagéber —con una renta mediana por unidad de consumo de 23.450 euros, y apenas un 10% de personas en riesgo de pobreza (con una renta equivalente por persona inferior al 60% de la mediana nacional)—. En el extremo opuesto aparecen municipios como Torrevieja y Almoradí, donde la renta no pasa de 11.500 euros y la pobreza se eleva al 40%.</p>
 <p>El buscador a continuación permite consultar todos los municipios con información del INE, incluyendo datos de renta y pobreza:</p>
+<section id="buscador-por-municipio" class="level3">
+<h3 class="anchored" data-anchor-id="buscador-por-municipio">Buscador por municipio</h3>
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/JK1ZP/56/" width="100%" height="617px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/JK1ZP/58/" width="100%" height="617px" data-external="1">
 </iframe>
 </div>
 <p>La relación entre renta y pobreza es muy fuerte, como cabría esperar. Pero llama la atención la diferencias entre municipios pequeños y grandes: en las capitales hay más pobreza para la misma renta mediana, quizá porque acogen más desigualdad. Por ejemplo, Alicante tiene la misma renta mediana que Ontinyent, pero 8 puntos más de pobreza; Valencia capital tienen la misma renta que Almàssera, pero 5 puntos más de pobreza.</p>
+</section>
+<section id="renta-vs.-pobreza" class="level3">
+<h3 class="anchored" data-anchor-id="renta-vs.-pobreza">Renta vs.&nbsp;pobreza</h3>
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/YgHLE/46/" width="100%" height="617px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/YgHLE/48/" width="100%" height="617px" data-external="1">
 </iframe>
 </div>
+</section>
 </section>
 <section id="mapas-por-sección-censal" class="level2">
 <h2 class="anchored" data-anchor-id="mapas-por-sección-censal">2. Mapas por sección censal</h2>
@@ -193,7 +202,7 @@ Tip
 <h3 class="anchored" data-anchor-id="mapa-de-pobreza-por-sección-censal">Mapa de pobreza por sección censal (%)</h3>
 <p>El siguiente mapa muestra la tasa de pobreza en cada territorio. Es posible hacer zoom con los botones o haciendo clic. Pasando el ratón sobre cada sección se muestra su código y su nombre.</p>
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/U74ES/70/" width="100%" height="831px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/U74ES/74/" width="100%" height="831px" data-external="1">
 </iframe>
 </div>
 </section>
@@ -201,7 +210,7 @@ Tip
 <h3 class="anchored" data-anchor-id="mapa-de-renta-mediana-por-sección-censal-euros">Mapa de renta mediana por sección censal (euros)</h3>
 <p>El siguiente mapa muestra la renta mediana por persona equivalente en cada territorio. Es posible hacer zoom con los botones o haciendo clic. Pasando el ratón sobre cada sección se muestra su código y su nombre.</p>
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/U74ES/71/" width="100%" height="831px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/U74ES/75/" width="100%" height="831px" data-external="1">
 </iframe>
 </div>
 </section>
@@ -217,14 +226,14 @@ Tip
 <div class="columns">
 <div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/nqVQe/45/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/nqVQe/47/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/VgzgR/47/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/VgzgR/49/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div>
@@ -237,14 +246,14 @@ Tip
 <div class="columns">
 <div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/Ag5pD/47/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/Ag5pD/49/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/h508P/46/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/h508P/48/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div>
@@ -256,14 +265,14 @@ Tip
 <div class="columns">
 <div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/3Mzk7/45/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/3Mzk7/47/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/jz18I/45/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/jz18I/47/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div>
@@ -276,14 +285,14 @@ Tip
 <div class="columns">
 <div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/C0nWI/43/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/C0nWI/45/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:47.5%;">
 <div class="cell" data-layout-align="center">
-<iframe src="https://datawrapper.dwcdn.net/4PWDN/46/" width="100%" height="400px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/4PWDN/48/" width="100%" height="400px" data-external="1">
 </iframe>
 </div>
 </div>

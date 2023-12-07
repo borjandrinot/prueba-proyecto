@@ -1,0 +1,38 @@
+
+/*-- scss:defaults --*/
+  
+
+/*-- scss:rules --*/
+:root {
+  font-family: Inter, sans-serif !important;
+  font-feature-settings: 'liga' 1, 'calt' 1 !important; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif !important; }
+}
+
+p {
+  margin-bottom: 1.1em !important;
+  max-width: 550px !important;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-top: 3em;
+  max-width: 550px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 3em;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 2em;
+}
+
+table {
+  max-width: 650px;
+}
